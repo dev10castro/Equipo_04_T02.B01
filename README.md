@@ -3,7 +3,7 @@
  
 ## Participantes
 - David Castro Soriano 
-- Pedro Gonzáles 
+- Pedro González  
 - Antonio Gómez Camarena
 
 ## Descripción
