@@ -1,9 +1,9 @@
 # Equipo_04_T02.B01
- Repositorio Equipo 04 - Diseño de interfaces
+ Repositorio Equipo 04 - Diseño de interfaces - Proyecto TaskHub
  
 ## Participantes
 - David Castro Soriano 
-- Pedro González  
+- Pedro González Martín 
 - Antonio Gómez Camarena
 
 ## Descripción
