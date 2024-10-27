@@ -239,7 +239,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Inicio de sesi\u00f3n_Equipo_04", None))
         self.actionIniciar_sesi_n.setText(QCoreApplication.translate("MainWindow", u"Iniciar sesi\u00f3n", None))
         self.actionRegistrarse.setText(QCoreApplication.translate("MainWindow", u"Registrarse", None))
         self.actionAcerda_de.setText(QCoreApplication.translate("MainWindow", u"Vaciar campos de texto", None))

@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow
-from view.InicioSesion_Equipo04_uiV2 import Ui_MainWindow  # Importa la clase Ui_MainWindow generada
+from view.Registro_Equipo04_uiV2 import Ui_MainWindow  # Importa la clase Ui_MainWindow generada
 
 class MainWindow(QMainWindow):
     def __init__(self):

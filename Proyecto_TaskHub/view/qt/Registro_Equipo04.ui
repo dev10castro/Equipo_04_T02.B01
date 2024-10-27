@@ -33,7 +33,7 @@
     <!-- Configura la fuente para utilizar "PreferDefaultHinting", que mejora la visualización del texto en la pantalla -->
 
     <property name="windowTitle">
-      <string>MainWindow</string>
+      <string>Registro Equipo_04</string>
     </property>
     <!-- Establece el título de la ventana como "MainWindow" -->
 
