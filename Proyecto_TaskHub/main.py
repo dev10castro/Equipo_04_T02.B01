@@ -1,17 +1,22 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow
-from view.InicioSesion_Equipo04_uiV2 import Ui_MainWindow  # Importa la clase Ui_MainWindow generada
+from PySide6.QtWidgets import QApplication
+from view.login_window import LoginWindow  # Importa la clase Ui_MainWindow generada
+from models import inicializacion_db as init_db
 
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super(MainWindow, self).__init__()
+if __name__ == "__main__":  
+    # Creamos una instancia de QApplication, pasándole los argumentos del sistema
+    app = QApplication(sys.argv)  
 
-        # Crear una instancia de la UI
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)  # Configura la UI en la ventana principal
+    # Inicializamos la base de datos llamando al método init_db desde el módulo inicializacion_db
+    init_db.init_db()  
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)  # Crea la aplicación
-    window = MainWindow()  # Crea una instancia de la ventana
-    window.show()  # Muestra la ventana
-    sys.exit(app.exec())  # Ejecuta el bucle de eventos
+    # Creamos una instancia de LoginWindow (la ventana de inicio de sesión)
+    login_window = LoginWindow()  
+    
+    # Mostramos la ventana de login
+    login_window.show()  
+    
+    # Ejecutamos el bucle de eventos de la aplicación para esperar interacciones del usuario
+    sys.exit(app.exec())  
+    
+# __main__

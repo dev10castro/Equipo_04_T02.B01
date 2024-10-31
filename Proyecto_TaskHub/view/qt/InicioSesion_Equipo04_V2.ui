@@ -1,644 +1,538 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Define la versión XML y la codificación como UTF-8 para soportar caracteres especiales -->
-
 <ui version="4.0">
-  <!-- Indica que se está utilizando la versión 4.0 de Qt Designer -->
-
-  <class>MainWindow</class>
-  <!-- Define el nombre de la clase para esta interfaz de usuario como "MainWindow" -->
-
-  <widget class="QMainWindow" name="Main_window">
-    <!-- Especifica que el widget principal es un QMainWindow con el nombre "Main_Window" -->
-
-    <property name="windowModality">
-      <enum>Qt::WindowModality::NonModal</enum>
-    </property>
-    <!-- La ventana tiene una modalidad "NonModal", permitiendo al usuario interactuar con otras ventanas abiertas -->
-
-    <property name="geometry">
-      <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>904</width>
-        <height>689</height>
-      </rect>
-    </property>
-    <!-- Define la posición y tamaño de la ventana principal: ubicada en (0,0) con un ancho de 904 y un alto de 689 píxeles -->
-
-    <property name="font">
-      <font>
-        <hintingpreference>PreferDefaultHinting</hintingpreference>
-      </font>
-    </property>
-    <!-- Configura la fuente para utilizar "PreferDefaultHinting", que mejora la visualización del texto en la pantalla -->
-
-    <property name="windowTitle">
-      <string>Inicio de sesión_Equipo_04</string>
-    </property>
-    <!-- Establece el título de la ventana como "Inicio de sesión_Equipo_04" -->
-
-    <property name="layoutDirection">
-      <enum>Qt::LayoutDirection::LeftToRight</enum>
-    </property>
-    <!-- Establece que la dirección de disposición de los elementos es de izquierda a derecha -->
-
-    <property name="autoFillBackground">
-      <bool>false</bool>
-    </property>
-    <!-- Desactiva el relleno automático de fondo en la ventana principal -->
-
-    <property name="styleSheet">
-      <string notr="true">QWidget#MainWindow{
+ <class>Inicio_Sesion_Equipo04</class>
+ <widget class="QMainWindow" name="Inicio_Sesion_Equipo04">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>710</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <hintingpreference>PreferDefaultHinting</hintingpreference>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Inicio de sesión_Equipo_04</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainWindow{
         background-color: rgb(65, 130, 195);
       }</string>
-    </property>
-    <!-- Aplica un estilo CSS solo para el widget MainWindow, configurando un color de fondo azul claro (rgb(65, 130, 195)) -->
-
-    <widget class="QWidget" name="central_widget">
-      <!-- Declara el widget central "central_widget", que contiene el contenido principal de la ventana -->
-
-      <property name="styleSheet">
-        <string notr="true">display:flex;
+  </property>
+  <widget class="QWidget" name="central_widget">
+   <property name="styleSheet">
+    <string notr="true">display:flex;
           justify-content:center;
         </string>
+   </property>
+   <layout class="QVBoxLayout" name="vertical_Layout_2">
+    <item>
+     <spacer name="vertical_spacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
-      <!-- Aplica un estilo CSS con "display: flex" en el widget central, para alinear su contenido al centro -->
-
-      <layout class="QVBoxLayout" name="vertical_Layout_2">
-        <!-- Define un diseño vertical (QVBoxLayout) llamado "vertical_layout_2" para organizar los elementos verticalmente -->
-
-        <item>
-          <spacer name="vertical_spacer">
-            <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-              <size>
-                <width>20</width>
-                <height>40</height>
-              </size>
-            </property>
-          </spacer>
-        </item>
-        <!-- Añade un espaciador vertical para crear separación en el diseño, de 20 píxeles de ancho y 40 de alto -->
-
-        <item>
-          <layout class="QHBoxLayout" name="horizontal_Layout">
-            <!-- Define un diseño horizontal (QHBoxLayout) para organizar widgets en una fila -->
-
-            <item>
-              <spacer name="horizontal_spacer">
-                <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                  <size>
-                    <width>40</width>
-                    <height>20</height>
-                  </size>
-                </property>
-              </spacer>
-            </item>
-            <!-- Añade un espaciador horizontal con tamaño sugerido 40x20 para proporcionar espacio lateral entre widgets -->
-
-            <item>
-              <widget class="QFrame" name="frame">
-                <!-- Define un QFrame llamado "frame", que funciona como contenedor para agrupar otros widgets -->
-
-                <property name="font">
-                  <font>
-                    <pointsize>9</pointsize>
-                  </font>
-                </property>
-                <!-- Configura el tamaño de fuente en el frame como 9 puntos -->
-
-                <property name="styleSheet">
-                  <string notr="true">QWidget#frame{
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontal_Layout">
+      <item>
+       <spacer name="horizontal_spacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QWidget#frame{
                     border-radius:15px;
                     background-color: rgb(40, 81, 121);
                   }</string>
-                </property>
-                <!-- Aplica un estilo CSS personalizado al frame, con esquinas redondeadas de 15px y un fondo azul oscuro (rgb(40, 81, 121)) -->
-
-                <property name="frameShape">
-                  <enum>QFrame::Shape::StyledPanel</enum>
-                </property>
-                <!-- Configura el frame como un panel estilizado (StyledPanel) con un borde decorativo -->
-
-                <property name="frameShadow">
-                  <enum>QFrame::Shadow::Raised</enum>
-                </property>
-                <!-- Define la sombra del frame como "Raised" para darle un efecto de relieve o elevación -->
-
-                <layout class="QVBoxLayout" name="vertical_layout">
-                  <!-- Define un diseño vertical dentro del frame para organizar los widgets de arriba hacia abajo -->
-
-                  <item>
-                    <widget class="QLabel" name="label_iniciar_sesion">
-                      <!-- Declara una etiqueta (QLabel) llamada "label_iniciar_sesion" que muestra el texto "Iniciar sesión" -->
-
-                      <property name="font">
-                        <font>
-                          <family>Segoe UI Black</family>
-                          <pointsize>29</pointsize>
-                          
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente como "Segoe UI Black" de 29 puntos para un texto en negrita y de gran tamaño -->
-                      <property name="styleSheet">
-                        <string notr="true">letter-spacing:5px;</string>
-                      </property>
-
-                      <property name="frameShape">
-                        <enum>QFrame::Shape::NoFrame</enum>
-                      </property>
-                      <!-- Define el marco de la etiqueta como "NoFrame", sin borde alrededor del texto -->
-
-                      <property name="frameShadow">
-                        <enum>QFrame::Shadow::Plain</enum>
-                      </property>
-                      <!-- Configura la sombra de la etiqueta como "Plain", sin efecto de sombra adicional -->
-
-                      <property name="text">
-                        <string>Iniciar sesión</string>
-                      </property>
-                      <!-- Define el texto de la etiqueta como "Iniciar sesión" -->
-
-                      <property name="textFormat">
-                        <enum>Qt::TextFormat::RichText</enum>
-                      </property>
-                      <!-- Configura el formato de texto como "RichText", permitiendo HTML si es necesario -->
-
-                      <property name="alignment">
-                        <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
-                      </property>
-                      <!-- Alinea el texto horizontalmente al centro y verticalmente en la parte superior de la etiqueta -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <widget class="Line" name="line_iniciar_sesion">
-                      <!-- Declara un widget de tipo línea (Line) llamado "line_iniciar_sesion", usado como separador visual horizontal -->
-
-                      <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255);</string>
-                      </property>
-                      <!-- Define el color de fondo de la línea como blanco (rgb(255, 255, 255)) -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Horizontal</enum>
-                      </property>
-                      <!-- Establece la orientación de la línea como horizontal -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <spacer name="vertical_spacer_3">
-                      <!-- Añade un espaciador vertical llamado "vertical_spacer_3" para añadir espacio extra entre los widgets -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Vertical</enum>
-                      </property>
-                      <!-- Configura el espaciador con orientación vertical -->
-
-                      <property name="sizeHint" stdset="0">
-                        <size>
-                          <width>20</width>
-                          <height>40</height>
-                        </size>
-                      </property>
-                      <!-- Establece un tamaño sugerido para el espaciador: 20 de ancho y 40 de alto -->
-                    </spacer>
-                  </item>
-
-                  <item>
-                    <widget class="QLabel" name="label_usuario">
-                      <!-- Declara una etiqueta (QLabel) llamada "label_usuario", que muestra el texto "Usuario/Correo" -->
-
-                      <property name="font">
-                        <font>
-                          <family>Calibri</family>
-                          <pointsize>14</pointsize>
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente como "Calibri" de 14 puntos -->
-
-                      <property name="text">
-                        <string>Usuario/Correo</string>
-                      </property>
-                      <!-- Establece el texto de la etiqueta como "Usuario/Correo" -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <widget class="QLineEdit" name="texto_usuario_correo">
-                      <!-- Define un campo de entrada de texto (QLineEdit) llamado "texto_usuario_correo" para que el usuario introduzca su nombre de usuario o correo -->
-
-                      <property name="font">
-                        <font>
-                          <family>Comic Sans</family>
-                          <pointsize>18</pointsize>
-                          <italic>true</italic>
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente del campo en "Calibri" con un tamaño de 14 puntos -->
-
-                      <property name="styleSheet">
-                        <string notr="true">background-color: #e200ff; color:black;</string>
-                      </property>
-                      <!-- Aplica un fondo blanco y texto en negro para el campo de entrada -->
-
-                      <property name="text">
-                        <string/>
-                      </property>
-                      <!-- Deja el campo vacío inicialmente -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <spacer name="vertical_spacer_5">
-                      <!-- Añade un espaciador vertical llamado "vertical_spacer_5" para crear separación adicional entre los elementos -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Vertical</enum>
-                      </property>
-                      <!-- Configura el espaciador con orientación vertical -->
-
-                      <property name="sizeHint" stdset="0">
-                        <size>
-                          <width>20</width>
-                          <height>10</height>
-                        </size>
-                      </property>
-                      <!-- Define un tamaño sugerido de 20 de ancho y 10 de alto -->
-                    </spacer>
-                  </item>
-
-                  <item>
-                    <widget class="QLabel" name="label_contraseña">
-                      <!-- Declara una etiqueta llamada "label_contraseña" para mostrar el texto "Contraseña" -->
-
-                      <property name="font">
-                        <font>
-                          <family>Calibri</family>
-                          <pointsize>14</pointsize>
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente en "Calibri" de tamaño 14 puntos -->
-
-                      <property name="text">
-                        <string>Contraseña</string>
-                      </property>
-                      <!-- Establece el texto de la etiqueta como "Contraseña" -->
-                    </widget>
-                  </item>
-                  <item>
-                    <widget class="QLineEdit" name="texto_contrasenna">
-                      <!-- Define un campo de entrada de texto (QLineEdit) llamado "texto_contrasenna" para que el usuario introduzca su contraseña -->
-
-                      <property name="font">
-                        <font>
-                          <family>Calibri</family>
-                          <pointsize>14</pointsize>
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente del campo en "Calibri" con tamaño de 14 puntos -->
-
-                      <property name="styleSheet">
-                        <string notr="true">background-color: rgb(255, 255, 255); color:black;</string>
-                      </property>
-                      <!-- Aplica un fondo blanco y texto en color negro al campo de entrada -->
-
-                      <property name="text">
-                        <string/>
-                      </property>
-                      <!-- Define el campo de texto como vacío inicialmente -->
-
-                      <property name="echoMode">
-                        <enum>QLineEdit::EchoMode::Password</enum>
-                      </property>
-                      <!-- Establece el modo de eco como "Password" para ocultar los caracteres al introducir la contraseña -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <spacer name="vertical_spacer_4">
-                      <!-- Añade un espaciador vertical llamado "verticalSpacer_4" para proporcionar separación entre los widgets -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Vertical</enum>
-                      </property>
-                      <!-- Configura el espaciador con orientación vertical -->
-
-                      <property name="sizeHint" stdset="0">
-                        <size>
-                          <width>20</width>
-                          <height>20</height>
-                        </size>
-                      </property>
-                      <!-- Define el tamaño sugerido del espaciador como 20 píxeles de ancho y 20 de alto -->
-                    </spacer>
-                  </item>
-
-                  <item>
-                    <widget class="QPushButton" name="boton_iniciar_sesion">
-                      <!-- Declara un botón (QPushButton) llamado "boton_iniciar_sesion", que se usará para iniciar sesión -->
-
-                      <property name="font">
-                        <font>
-                          <family>Arial</family>
-                          <pointsize>20</pointsize>
-                          <bold>true</bold>
-                          
-                          <hintingpreference>PreferDefaultHinting</hintingpreference>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente del botón en "Calibri", tamaño 14 puntos y con negrita activada -->
-
-                      <property name="cursor">
-                        <cursorShape>PointingHandCursor</cursorShape>
-                      </property>
-                      <!-- Cambia el cursor a una mano cuando el usuario pasa sobre el botón -->
-
-                      <property name="styleSheet">
-                        <string notr="true">background-color: #11ff00;</string>
-                      </property>
-                      <!-- Establece el color de fondo del botón como naranja (#f2784b) -->
-
-                      <property name="text">
-                        <string>Iniciar sesión</string>
-                      </property>
-                      <!-- Define el texto del botón como "Iniciar sesión" -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <widget class="Line" name="line_botones">
-                      <!-- Declara una segunda línea (Line) para servir como separador visual horizontal -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Horizontal</enum>
-                      </property>
-                      <!-- Establece la orientación de la línea como horizontal -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <widget class="QPushButton" name="boton_registrate">
-                      <!-- Define otro botón (QPushButton) llamado "boton_registrate" que se usará para redirigir al registro -->
-
-                      <property name="font">
-                        <font>
-                          <family>Calibri</family>
-                          <pointsize>14</pointsize>
-                          <bold>true</bold>
-                        </font>
-                      </property>
-                      <!-- Configura la fuente del botón en "Calibri" de tamaño 14 puntos y con negrita activada -->
-
-                      <property name="styleSheet">
-                        <string notr="true">background-color: #f2784b;</string>
-                      </property>
-                      <!-- Define el color de fondo del botón como naranja (#f2784b) -->
-
-                      <property name="text">
-                        <string>Regístrate</string>
-                      </property>
-                      <!-- Establece el texto del botón como "Regístrate" -->
-                    </widget>
-                  </item>
-
-                  <item>
-                    <spacer name="vertical_spacer_6">
-                      <!-- Añade un espaciador vertical adicional llamado "vertical_spacer_6" para crear espacio al final de la disposición -->
-
-                      <property name="orientation">
-                        <enum>Qt::Orientation::Vertical</enum>
-                      </property>
-                      <!-- Configura el espaciador con orientación vertical -->
-
-                      <property name="sizeHint" stdset="0">
-                        <size>
-                          <width>20</width>
-                          <height>15</height>
-                        </size>
-                      </property>
-                      <!-- Define el tamaño sugerido del espaciador como 20 píxeles de ancho y 15 de alto -->
-                    </spacer>
-                  </item>
-                </layout>
-              </widget>
-            </item>
-
-            <item>
-              <spacer name="horizontal_spacer_2">
-                <!-- Añade un espaciador horizontal para crear separación lateral en el diseño horizontal principal -->
-
-                <property name="orientation">
-                  <enum>Qt::Orientation::Horizontal</enum>
-                </property>
-                <!-- Configura el espaciador como horizontal -->
-
-                <property name="sizeHint" stdset="0">
-                  <size>
-                    <width>40</width>
-                    <height>20</height>
-                  </size>
-                </property>
-                <!-- Define un tamaño sugerido de 40 píxeles de ancho y 20 de alto -->
-              </spacer>
-            </item>
-          </layout>
-        </item>
-
-        <item>
-          <spacer name="vertical_spacer_2">
-            <!-- Añade un espaciador vertical en el diseño vertical principal para crear separación al final -->
-
-            <property name="orientation">
-              <enum>Qt::Orientation::Vertical</enum>
-            </property>
-            <!-- Configura el espaciador como vertical -->
-
-            <property name="sizeHint" stdset="0">
-              <size>
-                <width>20</width>
-                <height>40</height>
-              </size>
-            </property>
-            <!-- Define el tamaño sugerido como 20 píxeles de ancho y 40 de alto -->
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="vertical_layout">
+         <item>
+          <widget class="QLabel" name="label_iniciar_sesion">
+           <property name="font">
+            <font>
+             <family>Segoe UI Black</family>
+             <pointsize>29</pointsize>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">letter-spacing:5px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Plain</enum>
+           </property>
+           <property name="text">
+            <string>Iniciar sesión</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::TextFormat::RichText</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_iniciar_sesion">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="vertical_spacer_3">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
           </spacer>
-        </item>
-      </layout>
-    </widget>
-
-    <widget class="QMenuBar" name="menubar">
-      <!-- Declara un QMenuBar (barra de menú) llamado "menubar" para la ventana principal -->
-
-      <property name="geometry">
-        <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>904</width>
-          <height>33</height>
-        </rect>
-      </property>
-      <!-- Define la posición (0,0) y tamaño de la barra de menú (904 píxeles de ancho y 33 de alto) -->
-
-      <property name="palette">
-        <palette>
-          <active>
-            <colorrole role="WindowText">
-              <brush brushstyle="SolidPattern">
-                <color alpha="255">
-                  <red>255</red>
-                  <green>255</green>
-                  <blue>255</blue>
-                </color>
-              </brush>
-            </colorrole>
-            <!-- Define el color del texto de la ventana como blanco (rgb(255, 255, 255)) cuando la ventana está activa -->
-
-            <colorrole role="Button">
-              <brush brushstyle="SolidPattern">
-                <color alpha="255">
-                  <red>40</red>
-                  <green>81</green>
-                  <blue>121</blue>
-                </color>
-              </brush>
-            </colorrole>
-            <!-- Define el color de fondo de los botones como azul oscuro (rgb(40, 81, 121)) en el estado activo -->
-
-            <!-- Se repite esta estructura para diferentes roles de color, como "Light", "Midlight", "Dark", etc., en los estados "inactive" y "disabled". -->
-          </active>
-          <inactive>
-            <!-- Estructura similar a "active", definiendo colores para el estado inactivo -->
-          </inactive>
-          <disabled>
-            <!-- Estructura similar a "active", pero para el estado desactivado -->
-          </disabled>
-        </palette>
-      </property>
-
-      <property name="font">
-        <font>
-          <family>Arial</family>
-          <pointsize>10</pointsize>
-        </font>
-      </property>
-      <!-- Establece la fuente de la barra de menú en "Arial" de tamaño 10 puntos -->
-
-      <property name="styleSheet">
-        <string notr="true">background-color: rgb(40, 81, 121);</string>
-      </property>
-      <!-- Aplica un fondo de color azul oscuro (rgb(40, 81, 121)) a toda la barra de menú -->
-
-      <widget class="QMenu" name="menu_opciones">
-        <!-- Declara un menú (QMenu) llamado "menu_opciones" dentro de la barra de menú -->
-
-        <property name="font">
-          <font>
-            <family>Arial</family>
-            <pointsize>10</pointsize>
-          </font>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_usuario">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="text">
+            <string>Correo</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="texto_usuario_correo">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>14</pointsize>
+             <italic>false</italic>
+             <bold>false</bold>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255); color:black;</string>
+           </property>
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="vertical_spacer_5">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_contraseña">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>14</pointsize>
+             <bold>true</bold>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="text">
+            <string>Contraseña</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="texto_contrasenna">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>14</pointsize>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255); color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::EchoMode::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="vertical_spacer_4">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boton_iniciar_sesion">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+             <hintingpreference>PreferDefaultHinting</hintingpreference>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #f2784b;;</string>
+           </property>
+           <property name="text">
+            <string>Iniciar sesión</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_botones">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="boton_registrate">
+           <property name="font">
+            <font>
+             <family>Calibri</family>
+             <pointsize>20</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #f2784b;</string>
+           </property>
+           <property name="text">
+            <string>Regístrate</string>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="vertical_spacer_6">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>15</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontal_spacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
         </property>
-        <!-- Configura la fuente del menú en "Arial" de tamaño 10 puntos -->
-
-        <property name="title">
-          <string>Archivo</string>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
         </property>
-        <!-- Define el título del menú como "Archivo" -->
-
-        <widget class="QMenu" name="menu_acerca_de">
-          <!-- Define un submenú llamado "menu_acerca_de" dentro del menú "Archivo" -->
-
-          <property name="title">
-            <string>Acerca de</string>
-          </property>
-          <!-- Define el título del submenú como "Acerca de" -->
-
-          <addaction name="action_nuestra_empresa"/>
-          <!-- Añade una acción llamada "action_nuestra_empresa" al submenú "Acerca de" -->
-        </widget>
-
-        <addaction name="action_acerca_de"/>
-        <!-- Añade una acción llamada "action_acerca_de" al menú "Archivo" -->
-
-        <addaction name="menu_acerca_de"/>
-        <!-- Añade el submenú "Acerca de" al menú "Archivo" -->
-      </widget>
-
-      <widget class="QMenu" name="menu_iniciar_sesion">
-        <property name="title">
-          <string>Iniciar sesión</string>
-        </property>
-      </widget>
-      <!-- Define un menú llamado "menu_iniciar_sesion" en la barra de menú -->
-
-      <widget class="QMenu" name="menu_registrarse">
-        <property name="title">
-          <string>Regístrate</string>
-        </property>
-      </widget>
-      <!-- Define un menú titulado "Regístrate" en la barra de menú -->
-
-      <addaction name="menu_opciones"/>
-      <addaction name="menu_iniciar_sesion"/>
-      <addaction name="menu_registrarse"/>
-      <!-- Añade los menús "Opciones", "Iniciar sesión" y "Regístrate" a la barra de menú -->
-    </widget>
-
-    <widget class="QStatusBar" name="statusbar"/>
-    <!-- Define una barra de estado (QStatusBar) llamada "statusbar" para mostrar mensajes en la parte inferior de la ventana principal -->
-
-    <action name="action_iniciar_sesion">
-      <property name="text">
-        <string>Iniciar sesión</string>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="vertical_spacer_2">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
       </property>
-      <property name="font">
-        <font>
-          <family>Calibri</family>
-          <pointsize>10</pointsize>
-        </font>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
       </property>
-    </action>
-    <!-- Declara una acción llamada "action_iniciar_sesion" con el texto "Iniciar sesión" y fuente "Calibri" de tamaño 10 puntos -->
-
-    <action name="action_registrarse">
-      <property name="text">
-        <string>Registrarse</string>
-      </property>
-      <property name="font">
-        <font>
-          <family>Calibri</family>
-          <pointsize>10</pointsize>
-        </font>
-      </property>
-    </action>
-    <!-- Define una acción llamada "action_registrarse" con el texto "Registrarse" y fuente "Calibri" de tamaño 10 puntos -->
-
-    <action name="action_acerca_de">
-      <property name="text">
-        <string>Vaciar campos de texto</string>
-      </property>
-    </action>
-    <!-- Añade una acción llamada "action_acerca_de" con texto "Vaciar campos de texto" -->
-
-    <action name="action_nuestra_empresa">
-      <property name="text">
-        <string>Nuestra empresa</string>
-      </property>
-    </action>
-    <!-- Define otra acción llamada "action_nuestra_empresa" con el texto "Nuestra empresa" -->
+     </spacer>
+    </item>
+   </layout>
   </widget>
-
-  <resources/>
-  <connections/>
-  <!-- Secciones vacías para recursos y conexiones de señales -->
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>710</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(40, 81, 121);</string>
+   </property>
+   <widget class="QMenu" name="menu_opciones">
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menu_acerca_de">
+     <property name="title">
+      <string>Acerca de</string>
+     </property>
+     <addaction name="action_nuestra_empresa"/>
+    </widget>
+    <addaction name="action_acerca_de"/>
+    <addaction name="menu_acerca_de"/>
+   </widget>
+   <widget class="QMenu" name="menu_iniciar_sesion">
+    <property name="title">
+     <string>Iniciar sesión</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_registrarse">
+    <property name="title">
+     <string>Regístrate</string>
+    </property>
+   </widget>
+   <addaction name="menu_opciones"/>
+   <addaction name="menu_iniciar_sesion"/>
+   <addaction name="menu_registrarse"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_iniciar_sesion">
+   <property name="text">
+    <string>Iniciar sesión</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_registrarse">
+   <property name="text">
+    <string>Registrarse</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_acerca_de">
+   <property name="text">
+    <string>Vaciar campos de texto</string>
+   </property>
+  </action>
+  <action name="action_nuestra_empresa">
+   <property name="text">
+    <string>Nuestra empresa</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
 </ui>

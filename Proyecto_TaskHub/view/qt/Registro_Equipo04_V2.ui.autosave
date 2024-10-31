@@ -305,7 +305,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btn_adicional">
+          <widget class="QPushButton" name="btn_iniciar_sesion">
            <property name="font">
             <font>
              <family>Calibri</family>
