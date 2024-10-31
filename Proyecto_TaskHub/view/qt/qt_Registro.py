@@ -184,19 +184,19 @@ class Ui_Registro_Equipo04(object):
 
         self.vertical_layout.addWidget(self.btn_registro)
 
-        self.btn_adicional = QPushButton(self.frame)
-        self.btn_adicional.setObjectName(u"btn_adicional")
+        self.btn_iniciar_sesion = QPushButton(self.frame)
+        self.btn_iniciar_sesion.setObjectName(u"btn_iniciar_sesion")
         font8 = QFont()
         font8.setFamilies([u"Calibri"])
         font8.setPointSize(20)
         font8.setBold(True)
         font8.setItalic(False)
         font8.setHintingPreference(QFont.PreferDefaultHinting)
-        self.btn_adicional.setFont(font8)
-        self.btn_adicional.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.btn_adicional.setStyleSheet(u"background-color: #f2784b")
+        self.btn_iniciar_sesion.setFont(font8)
+        self.btn_iniciar_sesion.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.btn_iniciar_sesion.setStyleSheet(u"background-color: #f2784b")
 
-        self.vertical_layout.addWidget(self.btn_adicional)
+        self.vertical_layout.addWidget(self.btn_iniciar_sesion)
 
         self.vertical_spacer_5 = QSpacerItem(20, 15, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
@@ -249,6 +249,6 @@ class Ui_Registro_Equipo04(object):
         self.label_repetir_contrasenna.setText(QCoreApplication.translate("Registro_Equipo04", u"Repetir contrase\u00f1a", None))
         self.edit_r_contrasenna.setText("")
         self.btn_registro.setText(QCoreApplication.translate("Registro_Equipo04", u"Reg\u00edstrate", None))
-        self.btn_adicional.setText(QCoreApplication.translate("Registro_Equipo04", u"Iniciar sesi\u00f3n", None))
+        self.btn_iniciar_sesion.setText(QCoreApplication.translate("Registro_Equipo04", u"Iniciar sesi\u00f3n", None))
     # retranslateUi
 

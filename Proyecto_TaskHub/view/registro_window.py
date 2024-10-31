@@ -9,14 +9,14 @@ class RegistroWindow(QMainWindow):
         self.ui = Ui_Registro_Equipo04()  # Crear una instancia de la interfaz generada
         self.ui.setupUi(self)  # Configurar la interfaz de usuario con el método setupUi
 
-        self.ui.btn_adicional.clicked.connect(self.function_volver_iniciar_sesion)
+        self.ui.btn_iniciar_sesion.clicked.connect(self.function_volver_iniciar_sesion)
         
         self.ui.btn_registro.clicked.connect(self.function_registro)
         
         self.usuario_controller = UsuarioController()
     # __init__
     
-
+    
     def function_volver_iniciar_sesion(self):
         self.hide()
         
