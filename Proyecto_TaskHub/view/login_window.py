@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow  # Importar QApplication para la app y QMainWindow para la ventana principal
 from PySide6.QtCore import Slot  # Importar Slot para los decoradores de los métodos
-
+from PySide6.QtWidgets import QMessageBox
 from view.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la clase generada a partir del archivo .ui
 from view.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
 from controllers.usuario_controller import UsuarioController  # Importar el controlador del usuario
@@ -27,17 +27,23 @@ class LoginWindow(QMainWindow):
     
     
     @Slot()
-    def on_button_login_clicked(self):
+    def on_button_login_clicked(self):  
         print("Hemos pulsado el botón de login")
         name = self.ui.texto_usuario_correo.text()
         password = self.ui.texto_contrasenna.text()
-        
-        # Comprobamos de que el usuario y la contraseña existen
-        if self.usuario_controller.verificar_usuario(name,password) is not None:
+    
+    # Comprobamos de que el usuario y la contraseña existen
+        if self.usuario_controller.verificar_usuario(name, password) is not None:
             print(f"Bienvenido {name}")
+        
+        # Crear el cuadro de diálogo de bienvenida
+            mensaje_bienvenida = QMessageBox(self)
+            mensaje_bienvenida.setWindowTitle("Inicio de sesión exitoso")
+            mensaje_bienvenida.setText(f"Bienvenido, {name}!")
+            mensaje_bienvenida.setIcon(QMessageBox.Information)
+            mensaje_bienvenida.exec()
         else:
-            print("Credenciales incorrectas")
-    # on_button_login_clicked
+             print("Credenciales incorrectas")
     
     
     @Slot()
