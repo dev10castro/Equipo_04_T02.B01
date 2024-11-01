@@ -12,7 +12,7 @@ def connect_db():
     try:
         # Intentamos crear una conexión a la base de datos usando los datos proporcionados
         conn = psycopg.connect(
-            dbname="eq04taskHubdb",  # Nombre de la base de datos
+            dbname="eq_04_taskHub_db",  # Nombre de la base de datos
             user="admin",                 # Usuario de la base de datos
             password="0000",              # Contraseña para acceder a la base de datos
             host="localhost",             # Dirección del servidor de base de datos (local)
