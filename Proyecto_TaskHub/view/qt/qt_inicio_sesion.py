@@ -32,9 +32,9 @@ class Ui_Inicio_Sesion_Equipo04(object):
         Inicio_Sesion_Equipo04.setFont(font)
         Inicio_Sesion_Equipo04.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         Inicio_Sesion_Equipo04.setAutoFillBackground(False)
-        Inicio_Sesion_Equipo04.setStyleSheet(u"QWidget#MainWindow{\n"
-"        background-color: rgb(65, 130, 195);\n"
-"      }")
+        Inicio_Sesion_Equipo04.setStyleSheet(u"QMainWindow#Inicio_Sesion_Equipo04{\n"
+"    background-color: rgb(65, 130, 195);\n"
+"}")
         self.action_iniciar_sesion = QAction(Inicio_Sesion_Equipo04)
         self.action_iniciar_sesion.setObjectName(u"action_iniciar_sesion")
         font1 = QFont()
@@ -44,15 +44,13 @@ class Ui_Inicio_Sesion_Equipo04(object):
         self.action_registrarse = QAction(Inicio_Sesion_Equipo04)
         self.action_registrarse.setObjectName(u"action_registrarse")
         self.action_registrarse.setFont(font1)
-        self.action_acerca_de = QAction(Inicio_Sesion_Equipo04)
-        self.action_acerca_de.setObjectName(u"action_acerca_de")
+        self.vaciar_campo_texto = QAction(Inicio_Sesion_Equipo04)
+        self.vaciar_campo_texto.setObjectName(u"vaciar_campo_texto")
         self.action_nuestra_empresa = QAction(Inicio_Sesion_Equipo04)
         self.action_nuestra_empresa.setObjectName(u"action_nuestra_empresa")
         self.central_widget = QWidget(Inicio_Sesion_Equipo04)
         self.central_widget.setObjectName(u"central_widget")
-        self.central_widget.setStyleSheet(u"display:flex;\n"
-"          justify-content:center;\n"
-"        ")
+        self.central_widget.setStyleSheet(u"")
         self.vertical_Layout_2 = QVBoxLayout(self.central_widget)
         self.vertical_Layout_2.setObjectName(u"vertical_Layout_2")
         self.vertical_spacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
@@ -85,7 +83,6 @@ class Ui_Inicio_Sesion_Equipo04(object):
         font3.setPointSize(29)
         font3.setHintingPreference(QFont.PreferDefaultHinting)
         self.label_iniciar_sesion.setFont(font3)
-        self.label_iniciar_sesion.setStyleSheet(u"letter-spacing:5px;")
         self.label_iniciar_sesion.setFrameShape(QFrame.Shape.NoFrame)
         self.label_iniciar_sesion.setFrameShadow(QFrame.Shadow.Plain)
         self.label_iniciar_sesion.setTextFormat(Qt.TextFormat.RichText)
@@ -215,7 +212,7 @@ class Ui_Inicio_Sesion_Equipo04(object):
         Inicio_Sesion_Equipo04.setCentralWidget(self.central_widget)
         self.menubar = QMenuBar(Inicio_Sesion_Equipo04)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 710, 20))
+        self.menubar.setGeometry(QRect(0, 0, 710, 33))
         palette = QPalette()
         brush = QBrush(QColor(255, 255, 255, 255))
         brush.setStyle(Qt.SolidPattern)
@@ -242,19 +239,13 @@ class Ui_Inicio_Sesion_Equipo04(object):
         self.menu_opciones.setFont(font10)
         self.menu_acerca_de = QMenu(self.menu_opciones)
         self.menu_acerca_de.setObjectName(u"menu_acerca_de")
-        self.menu_iniciar_sesion = QMenu(self.menubar)
-        self.menu_iniciar_sesion.setObjectName(u"menu_iniciar_sesion")
-        self.menu_registrarse = QMenu(self.menubar)
-        self.menu_registrarse.setObjectName(u"menu_registrarse")
         Inicio_Sesion_Equipo04.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(Inicio_Sesion_Equipo04)
         self.statusbar.setObjectName(u"statusbar")
         Inicio_Sesion_Equipo04.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menu_opciones.menuAction())
-        self.menubar.addAction(self.menu_iniciar_sesion.menuAction())
-        self.menubar.addAction(self.menu_registrarse.menuAction())
-        self.menu_opciones.addAction(self.action_acerca_de)
+        self.menu_opciones.addAction(self.vaciar_campo_texto)
         self.menu_opciones.addAction(self.menu_acerca_de.menuAction())
         self.menu_acerca_de.addAction(self.action_nuestra_empresa)
 
@@ -267,7 +258,7 @@ class Ui_Inicio_Sesion_Equipo04(object):
         Inicio_Sesion_Equipo04.setWindowTitle(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Inicio de sesi\u00f3n_Equipo_04", None))
         self.action_iniciar_sesion.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Iniciar sesi\u00f3n", None))
         self.action_registrarse.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Registrarse", None))
-        self.action_acerca_de.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Vaciar campos de texto", None))
+        self.vaciar_campo_texto.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Vaciar campos de texto", None))
         self.action_nuestra_empresa.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Nuestra empresa", None))
         self.label_iniciar_sesion.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Iniciar sesi\u00f3n", None))
         self.label_usuario.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Correo", None))
@@ -279,7 +270,5 @@ class Ui_Inicio_Sesion_Equipo04(object):
         self.boton_registrate.setText(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Reg\u00edstrate", None))
         self.menu_opciones.setTitle(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Archivo", None))
         self.menu_acerca_de.setTitle(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Acerca de", None))
-        self.menu_iniciar_sesion.setTitle(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Iniciar sesi\u00f3n", None))
-        self.menu_registrarse.setTitle(QCoreApplication.translate("Inicio_Sesion_Equipo04", u"Reg\u00edstrate", None))
     # retranslateUi
 

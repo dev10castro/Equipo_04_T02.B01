@@ -34,9 +34,7 @@
   </property>
   <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
-    <string notr="true">display:flex;
-          justify-content:center;
-        </string>
+    <string notr="true"/>
    </property>
    <layout class="QVBoxLayout" name="vertical_Layout_2">
     <item>
@@ -482,13 +480,7 @@
     <addaction name="vaciar_campo_texto"/>
     <addaction name="menu_acerca_de"/>
    </widget>
-   <widget class="QMenu" name="menu_registrarse">
-    <property name="title">
-     <string>Regístrate</string>
-    </property>
-   </widget>
    <addaction name="menu_opciones"/>
-   <addaction name="menu_registrarse"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_iniciar_sesion">

@@ -17,33 +17,35 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QMenuBar, QPushButton,
-    QSizePolicy, QSpacerItem, QStatusBar, QVBoxLayout,
-    QWidget)
+    QLineEdit, QMainWindow, QMenu, QMenuBar,
+    QPushButton, QSizePolicy, QSpacerItem, QStatusBar,
+    QVBoxLayout, QWidget)
 
 class Ui_Registro_Equipo04(object):
     def setupUi(self, Registro_Equipo04):
         if not Registro_Equipo04.objectName():
             Registro_Equipo04.setObjectName(u"Registro_Equipo04")
         Registro_Equipo04.setWindowModality(Qt.WindowModality.NonModal)
-        Registro_Equipo04.resize(1000, 521)
+        Registro_Equipo04.resize(856, 725)
         font = QFont()
         font.setHintingPreference(QFont.PreferDefaultHinting)
         Registro_Equipo04.setFont(font)
         Registro_Equipo04.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
         Registro_Equipo04.setAutoFillBackground(False)
-        Registro_Equipo04.setStyleSheet(u"QWidget#MainWindow{\n"
-"        background-color: rgb(65, 130, 195);\n"
-"      }")
+        Registro_Equipo04.setStyleSheet(u"QMainWindow#Registro_Equipo04{\n"
+"    background-color: rgb(65, 130, 195);\n"
+"}")
         self.action_iniciar_sesion = QAction(Registro_Equipo04)
         self.action_iniciar_sesion.setObjectName(u"action_iniciar_sesion")
         self.action_nuestra_empresa = QAction(Registro_Equipo04)
         self.action_nuestra_empresa.setObjectName(u"action_nuestra_empresa")
+        self.vaciar_campos_de_texto = QAction(Registro_Equipo04)
+        self.vaciar_campos_de_texto.setObjectName(u"vaciar_campos_de_texto")
+        self.action_nuestra_empresa_2 = QAction(Registro_Equipo04)
+        self.action_nuestra_empresa_2.setObjectName(u"action_nuestra_empresa_2")
         self.central_widget = QWidget(Registro_Equipo04)
         self.central_widget.setObjectName(u"central_widget")
-        self.central_widget.setStyleSheet(u"display:flex;\n"
-"          justify-content:center;\n"
-"        ")
+        self.central_widget.setStyleSheet(u"")
         self.vertical_layout_2 = QVBoxLayout(self.central_widget)
         self.vertical_layout_2.setObjectName(u"vertical_layout_2")
         self.vertical_spacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
@@ -66,7 +68,6 @@ class Ui_Registro_Equipo04(object):
 "                    background-color: rgb(40, 81, 121);\n"
 "                  }")
         self.frame.setFrameShape(QFrame.Shape.WinPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Sunken)
         self.vertical_layout = QVBoxLayout(self.frame)
         self.vertical_layout.setObjectName(u"vertical_layout")
         self.label_registro = QLabel(self.frame)
@@ -113,7 +114,8 @@ class Ui_Registro_Equipo04(object):
         font4.setPointSize(14)
         font4.setHintingPreference(QFont.PreferDefaultHinting)
         self.edit_usuario.setFont(font4)
-        self.edit_usuario.setStyleSheet(u"background-color: black; color:white;")
+        self.edit_usuario.setAutoFillBackground(False)
+        self.edit_usuario.setStyleSheet(u"background-color: white; color:black;")
 
         self.vertical_layout.addWidget(self.edit_usuario)
 
@@ -130,7 +132,7 @@ class Ui_Registro_Equipo04(object):
         font5.setPointSize(14)
         self.edit_correo.setFont(font5)
         self.edit_correo.setAutoFillBackground(False)
-        self.edit_correo.setStyleSheet(u"background-color:black; color:white;")
+        self.edit_correo.setStyleSheet(u"background-color: white; color:black;")
 
         self.vertical_layout.addWidget(self.edit_correo)
 
@@ -147,7 +149,7 @@ class Ui_Registro_Equipo04(object):
         self.edit_contrasenna = QLineEdit(self.frame)
         self.edit_contrasenna.setObjectName(u"edit_contrasenna")
         self.edit_contrasenna.setFont(font4)
-        self.edit_contrasenna.setStyleSheet(u"background-color: black; color:white;")
+        self.edit_contrasenna.setStyleSheet(u"background-color: white; color:black;")
         self.edit_contrasenna.setEchoMode(QLineEdit.EchoMode.Password)
 
         self.vertical_layout.addWidget(self.edit_contrasenna)
@@ -161,7 +163,7 @@ class Ui_Registro_Equipo04(object):
         self.edit_r_contrasenna = QLineEdit(self.frame)
         self.edit_r_contrasenna.setObjectName(u"edit_r_contrasenna")
         self.edit_r_contrasenna.setFont(font5)
-        self.edit_r_contrasenna.setStyleSheet(u"background-color:black; color:white;")
+        self.edit_r_contrasenna.setStyleSheet(u"background-color: white; color:black;")
         self.edit_r_contrasenna.setEchoMode(QLineEdit.EchoMode.Password)
 
         self.vertical_layout.addWidget(self.edit_r_contrasenna)
@@ -183,6 +185,13 @@ class Ui_Registro_Equipo04(object):
         self.btn_registro.setStyleSheet(u"background-color: #f2784b;")
 
         self.vertical_layout.addWidget(self.btn_registro)
+
+        self.line = QFrame(self.frame)
+        self.line.setObjectName(u"line")
+        self.line.setFrameShape(QFrame.Shape.HLine)
+        self.line.setFrameShadow(QFrame.Shadow.Sunken)
+
+        self.vertical_layout.addWidget(self.line)
 
         self.btn_iniciar_sesion = QPushButton(self.frame)
         self.btn_iniciar_sesion.setObjectName(u"btn_iniciar_sesion")
@@ -219,16 +228,38 @@ class Ui_Registro_Equipo04(object):
         Registro_Equipo04.setCentralWidget(self.central_widget)
         self.menubar = QMenuBar(Registro_Equipo04)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 1000, 21))
+        self.menubar.setGeometry(QRect(0, 0, 856, 33))
         palette = QPalette()
         brush = QBrush(QColor(255, 255, 255, 255))
         brush.setStyle(Qt.SolidPattern)
         palette.setBrush(QPalette.Active, QPalette.WindowText, brush)
+        brush1 = QBrush(QColor(40, 81, 121, 255))
+        brush1.setStyle(Qt.SolidPattern)
+        palette.setBrush(QPalette.Active, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Active, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Active, QPalette.Window, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Inactive, QPalette.Window, brush1)
+        palette.setBrush(QPalette.Disabled, QPalette.Button, brush1)
+        palette.setBrush(QPalette.Disabled, QPalette.Base, brush1)
+        palette.setBrush(QPalette.Disabled, QPalette.Window, brush1)
         self.menubar.setPalette(palette)
+        self.menubar.setAutoFillBackground(False)
+        self.menubar.setStyleSheet(u"background-color: rgb(40, 81, 121);")
+        self.menuArchivo = QMenu(self.menubar)
+        self.menuArchivo.setObjectName(u"menuArchivo")
+        self.menu_acerca_de = QMenu(self.menuArchivo)
+        self.menu_acerca_de.setObjectName(u"menu_acerca_de")
         Registro_Equipo04.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(Registro_Equipo04)
         self.statusbar.setObjectName(u"statusbar")
         Registro_Equipo04.setStatusBar(self.statusbar)
+
+        self.menubar.addAction(self.menuArchivo.menuAction())
+        self.menuArchivo.addAction(self.vaciar_campos_de_texto)
+        self.menuArchivo.addAction(self.menu_acerca_de.menuAction())
+        self.menu_acerca_de.addAction(self.action_nuestra_empresa_2)
 
         self.retranslateUi(Registro_Equipo04)
 
@@ -239,6 +270,8 @@ class Ui_Registro_Equipo04(object):
         Registro_Equipo04.setWindowTitle(QCoreApplication.translate("Registro_Equipo04", u"Registro Equipo_04", None))
         self.action_iniciar_sesion.setText(QCoreApplication.translate("Registro_Equipo04", u"Vaciar campos de texto", None))
         self.action_nuestra_empresa.setText(QCoreApplication.translate("Registro_Equipo04", u"Nuestra empresa", None))
+        self.vaciar_campos_de_texto.setText(QCoreApplication.translate("Registro_Equipo04", u"Vaciar campos de texto", None))
+        self.action_nuestra_empresa_2.setText(QCoreApplication.translate("Registro_Equipo04", u"Nuestra empresa", None))
         self.label_registro.setText(QCoreApplication.translate("Registro_Equipo04", u"Registro", None))
         self.label_usuario.setText(QCoreApplication.translate("Registro_Equipo04", u"Usuario", None))
         self.edit_usuario.setText("")
@@ -250,5 +283,7 @@ class Ui_Registro_Equipo04(object):
         self.edit_r_contrasenna.setText("")
         self.btn_registro.setText(QCoreApplication.translate("Registro_Equipo04", u"Reg\u00edstrate", None))
         self.btn_iniciar_sesion.setText(QCoreApplication.translate("Registro_Equipo04", u"Iniciar sesi\u00f3n", None))
+        self.menuArchivo.setTitle(QCoreApplication.translate("Registro_Equipo04", u"Archivo", None))
+        self.menu_acerca_de.setTitle(QCoreApplication.translate("Registro_Equipo04", u"Acerca de", None))
     # retranslateUi
 

@@ -1,6 +1,5 @@
-from PySide6.QtWidgets import QMainWindow  # Importar QApplication para la app y QMainWindow para la ventana principal
+from PySide6.QtWidgets import QMainWindow, QMessageBox  # Importar QApplication para la app y QMainWindow para la ventana principal
 from PySide6.QtCore import Slot  # Importar Slot para los decoradores de los métodos
-from PySide6.QtWidgets import QMessageBox
 from view.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la clase generada a partir del archivo .ui
 from view.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
 from controllers.usuario_controller import UsuarioController  # Importar el controlador del usuario
@@ -87,9 +86,12 @@ class LoginWindow(QMainWindow):
         webbrowser.open(url)
     # abrirAcercaDe
     
+    """
+    Funcion que sirve para eliminar todo el texto que haya por pontalla en los capos de registros
+    """
     @Slot()
     def vaciarCamposDeTexto(self):
-        self.ui = Ui_Inicio_Sesion_Equipo04()
+        print("Borrar textos")
         self.ui.texto_usuario_correo.setText("")
         self.ui.texto_contrasenna.setText("")
-        
+    # vaciarCamposDeTexto
