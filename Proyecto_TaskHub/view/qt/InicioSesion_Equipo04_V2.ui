@@ -28,9 +28,9 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#MainWindow{
-        background-color: rgb(65, 130, 195);
-      }</string>
+   <string notr="true">QMainWindow#Inicio_Sesion_Equipo04{
+    background-color: rgb(65, 130, 195);
+}</string>
   </property>
   <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
@@ -95,9 +95,6 @@
              <pointsize>29</pointsize>
              <hintingpreference>PreferDefaultHinting</hintingpreference>
             </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">letter-spacing:5px;</string>
            </property>
            <property name="frameShape">
             <enum>QFrame::Shape::NoFrame</enum>
@@ -354,7 +351,7 @@
      <x>0</x>
      <y>0</y>
      <width>710</width>
-     <height>20</height>
+     <height>33</height>
     </rect>
    </property>
    <property name="palette">
@@ -482,13 +479,8 @@
      </property>
      <addaction name="action_nuestra_empresa"/>
     </widget>
-    <addaction name="action_acerca_de"/>
+    <addaction name="vaciar_campo_texto"/>
     <addaction name="menu_acerca_de"/>
-   </widget>
-   <widget class="QMenu" name="menu_iniciar_sesion">
-    <property name="title">
-     <string>Iniciar sesión</string>
-    </property>
    </widget>
    <widget class="QMenu" name="menu_registrarse">
     <property name="title">
@@ -496,7 +488,6 @@
     </property>
    </widget>
    <addaction name="menu_opciones"/>
-   <addaction name="menu_iniciar_sesion"/>
    <addaction name="menu_registrarse"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -522,7 +513,7 @@
     </font>
    </property>
   </action>
-  <action name="action_acerca_de">
+  <action name="vaciar_campo_texto">
    <property name="text">
     <string>Vaciar campos de texto</string>
    </property>

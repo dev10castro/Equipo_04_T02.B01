@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>521</height>
+    <width>856</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="font">
@@ -28,9 +28,9 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#MainWindow{
-        background-color: rgb(65, 130, 195);
-      }</string>
+   <string notr="true">QMainWindow#Registro_Equipo04{
+    background-color: rgb(65, 130, 195);
+}</string>
   </property>
   <widget class="QWidget" name="central_widget">
    <property name="styleSheet">
@@ -82,9 +82,6 @@
         </property>
         <property name="frameShape">
          <enum>QFrame::Shape::WinPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Shadow::Sunken</enum>
         </property>
         <layout class="QVBoxLayout" name="vertical_layout">
          <item>
@@ -160,8 +157,11 @@
              <hintingpreference>PreferDefaultHinting</hintingpreference>
             </font>
            </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
            <property name="styleSheet">
-            <string notr="true">background-color: black; color:white;</string>
+            <string notr="true">background-color: white; color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -195,7 +195,7 @@
             <bool>false</bool>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color:black; color:white;</string>
+            <string notr="true">background-color: white; color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -226,7 +226,7 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: black; color:white;</string>
+            <string notr="true">background-color: white; color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -259,7 +259,7 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color:black; color:white;</string>
+            <string notr="true">background-color: white; color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -377,8 +377,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
-     <height>21</height>
+     <width>856</width>
+     <height>33</height>
     </rect>
    </property>
    <property name="palette">
@@ -393,11 +393,120 @@
         </color>
        </brush>
       </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
      </active>
-     <inactive/>
-     <disabled/>
+     <inactive>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>40</red>
+         <green>81</green>
+         <blue>121</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
     </palette>
    </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(40, 81, 121);</string>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menu_acerca_de">
+     <property name="title">
+      <string>Acerca de</string>
+     </property>
+     <addaction name="action_nuestra_empresa_2"/>
+    </widget>
+    <addaction name="vaciar_campos_de_texto"/>
+    <addaction name="menu_acerca_de"/>
+   </widget>
+   <widget class="QMenu" name="menu_iniciar_sesion">
+    <property name="title">
+     <string>Iniciar sesión</string>
+    </property>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menu_iniciar_sesion"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_iniciar_sesion">
@@ -406,6 +515,16 @@
    </property>
   </action>
   <action name="action_nuestra_empresa">
+   <property name="text">
+    <string>Nuestra empresa</string>
+   </property>
+  </action>
+  <action name="vaciar_campos_de_texto">
+   <property name="text">
+    <string>Vaciar campos de texto</string>
+   </property>
+  </action>
+  <action name="action_nuestra_empresa_2">
    <property name="text">
     <string>Nuestra empresa</string>
    </property>
