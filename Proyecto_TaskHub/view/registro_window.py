@@ -16,14 +16,14 @@ class RegistroWindow(QMainWindow):
         self.usuario_controller = UsuarioController()
     # __init__
     
-    
+    @Slot()
     def function_volver_iniciar_sesion(self):
         self.hide()
         
         if self.parent() is not None:
             self.parent().mostrar_login()
         
-
+    @Slot()
     def function_registro(self):
 
         nombre_usuario = self.ui.edit_usuario.text()

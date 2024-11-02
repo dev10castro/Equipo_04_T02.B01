@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QMessageBox
 from view.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la clase generada a partir del archivo .ui
 from view.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
 from controllers.usuario_controller import UsuarioController  # Importar el controlador del usuario
+import webbrowser
 
 class LoginWindow(QMainWindow):
     """
@@ -19,7 +20,9 @@ class LoginWindow(QMainWindow):
         
         # Conectar las señales (clicks de botones) con los slots (métodos) correspondientes
         self.ui.boton_iniciar_sesion.clicked.connect(self.on_button_login_clicked)
-        self.ui.boton_registrate.clicked.connect(self.on_button_crear_cuenta_clicked);
+        self.ui.boton_registrate.clicked.connect(self.on_button_crear_cuenta_clicked)
+        self.ui.action_nuestra_empresa.triggered.connect(self.abrirAcercaDe)
+        self.ui.vaciar_campo_texto.triggered.connect(self.vaciarCamposDeTexto)
         
         self.Ui_Registro_Equipo04 = None
         self.usuario_controller = UsuarioController()
@@ -43,7 +46,12 @@ class LoginWindow(QMainWindow):
             mensaje_bienvenida.setIcon(QMessageBox.Information)
             mensaje_bienvenida.exec()
         else:
-             print("Credenciales incorrectas")
+            print("Credenciales incorrectas")
+            mensaje_error = QMessageBox(self)
+            mensaje_error.setWindowTitle("Error inicio de sesión")
+            mensaje_error.setText("Credenciales incorrecta")
+            mensaje_error.setIcon(QMessageBox.Critical)
+            mensaje_error.exec()
     
     
     @Slot()
@@ -58,12 +66,30 @@ class LoginWindow(QMainWindow):
         
         # Mostramos la ventana de registro
         self.Ui_Registro_Equipo04.show();
-        
     # on_button_crear_cuenta_clicked
+    
+    """
+    Método para mostrar la ventana de login cuando se cierra la de registro.
+    """
+    @Slot()
     def mostrar_login(self):
-        """
-        Método para mostrar la ventana de login cuando se cierra la de registro.
-        """
+       
         # Mostrar la ventana de login
         self.show()  
     # mostrar_login
+    
+    """
+    Funcion que sirve para abrir una pagina del navegador 
+    """
+    @Slot()
+    def abrirAcercaDe(self):
+        url = "https://github.com/dev10castro/Equipo_04_T02.B01/blob/main/README.md"
+        webbrowser.open(url)
+    # abrirAcercaDe
+    
+    @Slot()
+    def vaciarCamposDeTexto(self):
+        self.ui = Ui_Inicio_Sesion_Equipo04()
+        self.ui.texto_usuario_correo.setText("")
+        self.ui.texto_contrasenna.setText("")
+        
