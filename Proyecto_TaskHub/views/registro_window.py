@@ -36,6 +36,11 @@ class RegistroWindow(QMainWindow):
         
         if password != password_confirmada:
             print("Las contraseñas no coinciden")
+            mensaje_error = QMessageBox(self)
+            mensaje_error.setWindowTitle("Error las contraseñas no coinciden")
+            mensaje_error.setText("Error en el registro, las contraseñas no coinciden")
+            mensaje_error.setIcon(QMessageBox.Critical)
+            mensaje_error.exec()
             return
         
         print("Valores que se pasan a registrar_usuario:", email, nombre_usuario, password, password_confirmada)
