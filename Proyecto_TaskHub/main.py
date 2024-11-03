@@ -1,6 +1,6 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from view.login_window import LoginWindow  # Importa la clase Ui_MainWindow generada
+from views.login_window import LoginWindow  # Importa la clase Ui_MainWindow generada
 from models import inicializacion_db as init_db
 
 if __name__ == "__main__":  

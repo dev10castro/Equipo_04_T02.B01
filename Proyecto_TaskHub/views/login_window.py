@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QMainWindow, QMessageBox  # Importar QApplication para la app y QMainWindow para la ventana principal
 from PySide6.QtCore import Slot  # Importar Slot para los decoradores de los métodos
-from view.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la clase generada a partir del archivo .ui
-from view.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
+from views.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la clase generada a partir del archivo .ui
+from views.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
 from controllers.usuario_controller import UsuarioController  # Importar el controlador del usuario
 import webbrowser
 
