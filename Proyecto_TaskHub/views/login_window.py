@@ -72,7 +72,6 @@ class LoginWindow(QMainWindow):
     """
     @Slot()
     def mostrar_login(self):
-       
         # Mostrar la ventana de login
         self.show()  
     # mostrar_login
