@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QMessageBox  # Importar la clase QMainWindow para crear la ventana principal
+from PySide6.QtWidgets import QMainWindow, QMessageBox, QApplication  # Importar la clase QMainWindow para crear la ventana principal
 from PySide6.QtCore import Slot  # Importar Slot para la conexión de señales y slots
 from views.qt.qt_Registro import Ui_Registro_Equipo04  # Importar la clase generada a partir del archivo .ui
 from controllers.usuario_controller import UsuarioController  # Importar el controlador para manejar las operaciones de registro y validación del usuario
@@ -82,3 +82,7 @@ class RegistroWindow(QMainWindow):
         self.ui.edit_r_contrasenna.setText("")
         self.ui.edit_usuario.setText("")
     # vaciarCamposDeTexto
+    
+    def closeEvent(self, event):
+        """Cerrar la aplicación completa al cerrar la ventana de registro."""
+        QApplication.quit()

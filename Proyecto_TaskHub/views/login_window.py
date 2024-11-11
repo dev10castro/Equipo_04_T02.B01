@@ -62,6 +62,7 @@ class LoginWindow(QMainWindow):
             
             # Creamos la ventana de registro:
             self.Ui_Registro_Equipo04 = RegistroWindow(parent=self)
+
         
         # Mostramos la ventana de registro
         self.Ui_Registro_Equipo04.show();
