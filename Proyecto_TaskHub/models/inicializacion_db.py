@@ -1,4 +1,4 @@
-import Proyecto_TaskHub.models.db as db  # Importar el módulo db que está dentro de models para manejar la conexión a la base de datos
+import models.db as db  # Importar el módulo db que está dentro de models para manejar la conexión a la base de datos
 
 
 # Función para crear las tablas necesarias en la base de datos
