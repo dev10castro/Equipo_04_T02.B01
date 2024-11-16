@@ -4,6 +4,8 @@ from views.qt.qt_inicio_sesion import Ui_Inicio_Sesion_Equipo04 # Importar la cl
 from views.registro_window import RegistroWindow  # Importar la clase de la ventana de registro
 from controllers.usuario_controller import UsuarioController  # Importar el controlador del usuario
 import webbrowser
+from Componentes_Personalizado import Search_Bar
+from Componentes_Personalizado import Button_Search
 
 class LoginWindow(QMainWindow):
     """
@@ -16,7 +18,9 @@ class LoginWindow(QMainWindow):
         super().__init__()
         self.ui = Ui_Inicio_Sesion_Equipo04()
         self.ui.setupUi(self)
-        
+        self.barra = Search_Bar()
+        self.button = Button_Search()
+
         # Conectar las señales (clicks de botones) con los slots (métodos) correspondientes
         self.ui.boton_iniciar_sesion.clicked.connect(self.on_button_login_clicked)
         self.ui.boton_registrate.clicked.connect(self.on_button_crear_cuenta_clicked)
@@ -25,6 +29,10 @@ class LoginWindow(QMainWindow):
         
         self.Ui_Registro_Equipo04 = None
         self.usuario_controller = UsuarioController()
+        
+        
+        self.ui.horizontal_Layout.addWidget(self.barra)
+        self.ui.horizontal_Layout.addWidget(self.button)
     # __init__
     
     
@@ -44,6 +52,7 @@ class LoginWindow(QMainWindow):
             mensaje_bienvenida.setText(f"Bienvenido, {name}!")
             mensaje_bienvenida.setIcon(QMessageBox.Information)
             mensaje_bienvenida.exec()
+
         else:
             print("Credenciales incorrectas")
             mensaje_error = QMessageBox(self)

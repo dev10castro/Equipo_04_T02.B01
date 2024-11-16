@@ -19,6 +19,6 @@ if __name__ == "__main__":
     login_window.show()
 
     # Ejecutamos el bucle de eventos de la aplicación para esperar interacciones del usuario
-    sys.exit(app.exec())
+    sys.exit(app.exec()) 
 
 # __main__
