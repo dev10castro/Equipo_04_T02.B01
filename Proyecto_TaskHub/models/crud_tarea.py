@@ -9,7 +9,7 @@ class CRUDTarea:
     Clase que implementa operaciones CRUD para la tabla 'tarea' en la base de datos.
     """
 
-    def listar_tarea_por_usuario(self, idusuario):
+    def listar_tareas_por_usuario(self, idusuario):
         """
         Obtiene todas las tarea asociadas a un usuario específico.
 
@@ -17,7 +17,7 @@ class CRUDTarea:
         :return: Lista de objetos Tarea o lista vacía si no se encuentran resultados.
         """
         query = """
-        SELECT id, nombre, description, idusuario, activa
+        SELECT *
         FROM tarea
         WHERE idusuario = %s
         """

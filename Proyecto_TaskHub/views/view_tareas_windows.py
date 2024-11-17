@@ -11,6 +11,7 @@ class View_Tarea_Windows(QWidget):
         super().__init__(parent)
         
         # Layout principal
+        self.resize(500, 500)
         self.layout_vertical_main = QVBoxLayout()
         self.setLayout(self.layout_vertical_main)  # Establecemos el layout por defecto del widget
         
@@ -28,12 +29,7 @@ class View_Tarea_Windows(QWidget):
         self.header = self.tabla_tarea.horizontalHeader()
         self.header.setSectionResizeMode(QHeaderView.Stretch)
 
-              # Llenar la tabla con datos
-        self.llenar_tabla([
-            ["Hacer la compra", "2024-11-17", "Pendiente"],
-            ["Estudiar Python", "2024-11-18", "En progreso"],
-            ["Enviar correo", "2024-11-19", "Completado"]
-        ])
+  
         
         # Añadir componentes al layout horizontal
         self.layout_horizontal_search_bar.addWidget(self.search_bar)
@@ -51,6 +47,7 @@ class View_Tarea_Windows(QWidget):
         
         
     def llenar_tabla(self, datos):
+        print(datos)
         self.tabla_tarea.setRowCount(len(datos))  # Establecer el número de filas
         
         for fila, datos_fila in enumerate(datos):

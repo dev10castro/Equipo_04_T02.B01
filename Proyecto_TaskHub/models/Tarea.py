@@ -5,18 +5,13 @@ class Tarea:
     Clase que representa una tarea.
     """
 
-    def __init__(self, id, nombre, descripcion, idusuario, activa):
-        self._id = id
+    def __init__(self, nombre, descripcion, idusuario, activa):
         self._nombre = nombre
         self._descripcion = descripcion
         self._idusuario = idusuario
         self._activa = activa
 
     # Getters
-    @property
-    def id(self):
-        return self._id
-
     @property
     def nombre(self):
         return self._nombre
@@ -34,10 +29,6 @@ class Tarea:
         return self._activa
 
     # Setters
-    @id.setter
-    def id(self, value):
-        self._id = value
-
     @nombre.setter
     def nombre(self, value):
         self._nombre = value
