@@ -59,7 +59,7 @@ class View_Tarea_Windows(QWidget):
                     checkbox = QCheckBox()
                     checkbox.setChecked(dato == "No")  # Marcar si la tarea no está activa
                     checkbox.setStyleSheet("QCheckBox::indicator { subcontrol-position: center; }")
-                    checkbox.stateChanged.connect(lambda state, row=fila: self.actualizar_estilo_fila(row, state))
+                    checkbox.setEnabled(False)
                     self.tabla_tarea.setCellWidget(fila, columna, checkbox)
                 else:
                     item = QTableWidgetItem(dato)  # Crear un QTableWidgetItem
@@ -76,23 +76,7 @@ class View_Tarea_Windows(QWidget):
                             font.setStrikeOut(True)  # Texto tachado
                             item.setFont(font)
 
-    def actualizar_estilo_fila(self, fila, estado):
-        """
-        Actualizar el estilo de la fila en base al estado del QCheckBox.
-        """
-        for columna in range(2):  # Solo aplicar estilos a las columnas de texto
-            item = self.tabla_tarea.item(fila, columna)
-            if item:
-                if estado == Qt.Checked:
-                    item.setForeground(Qt.red)  # Color rojo
-                    font = item.font()
-                    font.setStrikeOut(True)  # Texto tachado
-                    item.setFont(font)
-                else:
-                    item.setForeground(Qt.black)  # Color negro
-                    font = item.font()
-                    font.setStrikeOut(False)  # Texto sin tachar
-                    item.setFont(font)
+   
 
     @Slot()
     def obtenerDatos(self):
