@@ -18,7 +18,7 @@ class View_Tarea_Windows(QWidget):
 
         # Layout horizontal para barra de búsqueda
         self.layout_horizontal_search_bar = QHBoxLayout()
-        self.button_search = Button_Search()
+        self.button_search = Button_Search(icon=variables.iconSearch, text="Buscar")
         self.search_bar = Search_Bar()
 
         # Creamos la tabla
