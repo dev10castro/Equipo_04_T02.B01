@@ -1,15 +1,14 @@
-# Archivo: T02_PR01/models/tarea.py
-
 class Tarea:
     """
     Clase que representa una tarea.
     """
 
-    def __init__(self, nombre, descripcion, idusuario, activa):
+    def __init__(self, nombre, descripcion, idusuario, activa, estado):
         self._nombre = nombre
         self._descripcion = descripcion
         self._idusuario = idusuario
         self._activa = activa
+        self._estado = estado
 
     # Getters
     @property
@@ -28,6 +27,10 @@ class Tarea:
     def activa(self):
         return self._activa
 
+    @property
+    def estado(self):
+        return self._estado
+
     # Setters
     @nombre.setter
     def nombre(self, value):
@@ -45,6 +48,10 @@ class Tarea:
     def activa(self, value):
         self._activa = value
 
+    @estado.setter
+    def estado(self, value):
+        self._estado = value
+
     def __repr__(self):
-        return (f"Tarea(id={self._id}, nombre={self._nombre}, "
-                f"descripcion={self._descripcion}, idusuario={self._idusuario}, activa={self._activa})")
+        return (f"Tarea(nombre={self._nombre}, descripcion={self._descripcion}, "
+                f"idusuario={self._idusuario}, activa={self._activa}, estado={self._estado})")
